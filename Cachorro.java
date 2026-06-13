@@ -1,20 +1,18 @@
-class Cachorro extends Animal implements AtendivelNoEstetica{
-    Cachorro(String nome, int idade, String raca, boolean faminto, String dono) {
-        super(nome, idade, raca, faminto, dono);
+
+class Cachorro extends Animal {
+    Cachorro(String nome, int idade, String raca, String nomeDono,String telefone) {
+        super(nome, idade, raca,nomeDono,telefone);
     }
 
     @Override
-    public void emitirSom() {
-        System.out.println("Au au!");
-    }
-
-    @Override
-    public void darBanho() {
-        System.out.println("Dando banho no cachorro...");
-    }
-
-    @Override
-    public void cortarUnhas() {
-    System.out.println("Cortando as unhas do cachorro...");
+    protected String exibirDados() {
+        return "---------------------------------\n"+
+               "|o nome do cachorro é; "+nome+ " | \n" 
+              +"| a raça é "+raca+ "             |\n" 
+              +"|idade "+idade+"                 |\n"
+              +"|o nome do tutor é "+nomeDono+"  |\n"
+              +"|e o telefone é "+telefone+"     |\n" 
+              +"----------------------------------";
     }
 }
+
