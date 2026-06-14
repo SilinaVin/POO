@@ -57,12 +57,12 @@ public class PetShopRepositorio {
 
 	/** Retorna a lista completa de animais cadastrados (cópia defensiva). */
 	public ArrayList<Animal> listarTodos() {
-		return animais;
+		return new ArrayList<>(animais);
 	}
 
 	/** Quantidade de animais cadastrados no repositório. */
 	public int quantidade() {
-		return 0;
+		return animais.size();
 	}
 }
 
